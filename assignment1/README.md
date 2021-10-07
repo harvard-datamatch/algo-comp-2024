@@ -16,7 +16,7 @@ class User:
     def __init__(self, name, gender, preferences, grad_year, responses):
         self.name = name # str
         self.gender = gender # str
-        self.preferences = preferences # List[str] (e.g. ['M']
+        self.preferences = preferences # List[str] (e.g. ['M'])
         self.grad_year = grad_year # int (e.g. 2022, 2023, 2024, 2025)
         self.responses = responses List[int] (e.g. [0, 1, 2, 3, 1])
 ```
