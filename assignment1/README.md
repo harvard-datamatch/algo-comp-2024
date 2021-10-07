@@ -4,15 +4,21 @@ In this assignment, you will implement a lightweight scoring function of your ch
 
 This project will be implemented in **Python** and most of your code will be in the `main.py` file, where you will implement the `compute_score` function.
 
+## Setup and Logistics
+This project is due on **Thursday, October 21st at 11:59 PM EST**. We recommend forking this repository and then sending either one of us (Jeremy or Leonard) the link when you're ready. When you fork, make sure to set this repository as the upstream repository so you can pull any changes we make. **We will not be making any changes to `compute_score`** so if you only write code within that function, you can pull without worrying about encountering merge conflicts.
+
+**Don't worry** if you are unfamiliar with using Git or Python. We will be providing docs on both that'll give you what you need to get started very soon (Jeremy needs to finish CS 165 and Stat 110 first)! In the meantime, we recommend checking out some articles on Google.
+
 ## Code Layout
 To make this more straightforward, we have provided a `User` class with a few attributes that you would find in Datamatch's main scoring algorithm:
 ```python
 class User:
-    def __init__(self, first_name, last_name, grad_year=None, responses=None):
-        self.first_name = first_name # string
-        self.last_name = last_name # string
+    def __init__(self, name, gender, preferences, grad_year, responses):
+        self.name = name # str
+        self.gender = gender # str
+        self.preferences = preferences # List[str] (e.g. ['M']
         self.grad_year = grad_year # int (e.g. 2022, 2023, 2024, 2025)
-        self.responses = responses # List[int] (e.g. [0, 1, 2, 3, 1])
+        self.responses = responses List[int] (e.g. [0, 1, 2, 3, 1])
 ```
 Note that for  `responses`, each index represents a question and the value stored at that index refers to the answer choice for that question (so in our above case, that person picked `2` for question `2`).
 
@@ -20,3 +26,6 @@ Your task for this assignment will be to implement `compute_score`. `compute_sco
 
 ## Running Your Code
 ```python3 main.py```
+
+## Other
+If you have any questions, don't hesitate to directly reach out to **Jeremy Hsu** or **Leonard Tang** on Slack!
