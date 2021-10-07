@@ -27,5 +27,10 @@ Your task for this assignment will be to implement `compute_score`. `compute_sco
 ## Running Your Code
 ```python3 main.py```
 
+## Collaboration
+Collaboration on high-level design is allowed and actually **highly encouraged** as this mimics the sorts of discussions we'll be having when designing Datamatch's main algorithm. We're going to spend our open design discussion time during the October 12th meeting talking about scoring again so you can have the chance to share the choices and considerations you made and hear what choices other compers made.
+
+As for code sharing, we certainly won't police you if your code looks suspiciously similar to someone else's, but still encourage to write your own code as it'll better prepare you for your projects down the line.
+
 ## Other
 If you have any questions, don't hesitate to directly reach out to **Jeremy Hsu** or **Leonard Tang** on Slack!
