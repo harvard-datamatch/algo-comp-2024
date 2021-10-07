@@ -1,6 +1,6 @@
 # Assignment 1: Scoring
 
-In this assignment, you will implement a lightweight scoring function of your choice. You are free to design your scoring function however you like! You can either use the factors and considerations that we discussed during our comp meetings or you can make completely different choices on what factors to consider and prioritize.
+In this assignment, you will implement a lightweight scoring function of your choice. You are free to design your scoring function however you like, but may find the design discussions we've had during our comp meetings helpful. 
 
 This project will be implemented in **Python** and most of your code will be in the `main.py` file, where you will implement the `compute_score` function.
 
