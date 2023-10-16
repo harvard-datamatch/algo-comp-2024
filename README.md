@@ -1,4 +1,4 @@
-# Algo Team Comp 2022
+# Algo Team Comp 2024
 
 Welcome to Datamatch! This repository will hold the two general comp assignments for the Algo team:
 
