@@ -2,23 +2,48 @@
 import json
 import sys
 import os
+from math import comb
 
 INPUT_FILE = 'testdata.json' # Constant variables are usually in ALL CAPS
 
 class User:
     def __init__(self, name, gender, preferences, grad_year, responses):
         self.name = name
-        self.gender = gender
-        self.preferences = preferences
+        self.gender = gender # str
+        self.preferences = preferences # list str
         self.grad_year = grad_year
         self.responses = responses
 
 
 # Takes in two user objects and outputs a float denoting compatibility
 def compute_score(user1, user2):
-    # YOUR CODE HERE
-    return 0
-
+    # if preferences are opposite, then multiply by 0
+    pref1 = 0
+    for i in range(len(user1.preferences)):
+        if user2.gender == user1.preferences[i]:
+            pref1 = 1 - i/len(user1.preferences)
+    pref2 = 1
+    for i in range(len(user2.preferences)):
+        if user1.gender == user2.preferences[i]:
+            pref2 = 1 - i/len(user2.preferences)
+    pref = (pref1 + pref2)/2
+    # if grad years are more than 2 years apart, then multiply by 0
+    age = 0
+    if abs(user2.grad_year - user1.grad_year) <= 2:
+        age = 1
+    # measure response similarity
+    sim1 = 0
+    sim2 = 0
+    for i in range(len(user1.responses)):
+        if user1.responses[i]==user2.responses[i]:
+            sim1+=1
+            for j in range(i+1, len(user1.responses)):
+                if user1.responses[j]==user2.responses[j]:
+                    sim2 += 1
+    sim1 = sim1/20
+    sim2 = sim2/((len(user1.responses)-1)*(len(user1.responses) -2)/2)
+    sim = (sim1 + sim2)/2
+    return sim
 
 if __name__ == '__main__':
     # Make sure input file is valid
